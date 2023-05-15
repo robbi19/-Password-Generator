@@ -2,6 +2,20 @@
 /* button info and assignment code */
 var generateBtn = document.querySelector("#generate");
 
+//* User input */
+function getPasswordOptions(userNumCharacters) {
+  if (isNaN(userNumCharacters)) {
+    alert("Did you forget to put in a Number?");
+    return false;
+  } else if (parseInt(userNumCharacters) < 8) {
+    alert("Reminder:password has to be at least 8  characters");
+    return false;
+  } else if (parseInt(userNumCharacters) >= 128) {
+    alert("Reminder:password has to be less than 128 characters");
+    return false;
+  }
+  return true;
+}
 
 // Write password to the #password input
 //* input for passwords */

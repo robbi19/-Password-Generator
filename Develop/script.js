@@ -25,7 +25,7 @@ function getRandomElementFromArray(collection) {
 // Write password to the #password input */
 
 /* if and else section , random var, user pw area*/
-function generatePassword() {
+function generatePassword() 
   var userNumCharacters = prompt(
     "How many characters would you like your password to be? Pick a number between 8-128."
   );
@@ -44,7 +44,65 @@ function generatePassword() {
       "This will include uppercase characters in your password?"
     );
   }
-  
+ //Sentence to check all */
+ if (
+  [hasSpecialChar, hasNumbers, hasLowerCase, hasUpperCase].includes(
+    true
+  )
+)
+  //Array to store characters into  password */
+  var chosenChar = [];
+
+// each type of  character to ensure each will be used */
+var guaranteedChar = [];
+
+// add array of each type of all character  */
+if (hasSpecialChar) {
+  chosenChar = chosenChar.concat(specialChar);
+  guaranteedChar.push(
+    specialChar[Math.floor(Math.random() * specialChar.length)]
+  );
+}
+if (hasNumbers) {
+  chosenChar = chosenChar.concat(numbers);
+  guaranteedChar.push(
+    numbers[Math.floor(Math.random() * numbers.length)]
+  );
+}
+if (hasLowerCase) {
+  chosenChar = chosenChar.concat(lowerCase);
+  guaranteedChar.push(
+    lowerCase[
+      Math.floor(Math.random() * lowerCase.length)
+    ]
+  );
+}
+if (hasUpperCase) {
+  chosenChar = chosenChar.concat(upperCase);
+  guaranteedChar.push(
+    upperCase[
+      Math.floor(Math.random() * upperCase.length)
+    ]
+  );
+}
+
+//*  password loop */
+var randomChar = [];
+for (var i = 0; i < userNumCharacters; i++) {
+  var index = Math.floor(Math.random() * chosenChar.length);
+  randomChar.push(chosenChar[index]);
+}
+ //Loop to another part */.
+var replacedPosition = {};
+while (guaranteedChar.length > 0) {
+  var replaceChar = Math.floor(Math.random() * randomChar.length);
+  if (!replacedPosition[replaceChar]) {
+    randomChar[replaceChar] = guaranteedChar.pop();
+    replacedPosition[replaceChar] = true;
+  }
+}
+return randomChar.join("");
+
 // Write password to the #password input
 //* input for passwords */
 function writePassword() {

@@ -17,6 +17,34 @@ function getPasswordOptions(userNumCharacters) {
   return true;
 }
 
+// random characters  */
+function getRandomElementFromArray(collection) {
+  return collection[Math.floor(Math.random() * collection.length)];
+}
+
+// Write password to the #password input */
+
+/* if and else section , random var, user pw area*/
+function generatePassword() {
+  var userNumCharacters = prompt(
+    "How many characters would you like your password to be? Pick a number between 8-128."
+  );
+  /* Confirm  and validation section */
+  var passwordValid = getPasswordOptions(userNumCharacters);
+  if (passwordValid) {
+    var hasSpecialChar = confirm(
+      "This will include special characters in your password?"
+    );
+    var hasNumbers = confirm("This will include numbers in your password?");
+
+    var hasLowerCase = confirm(
+      "This will include lowercase characters in your password?"
+    );
+    var hasUpperCase = confirm(
+      "This will include uppercase characters in your password?"
+    );
+  }
+  
 // Write password to the #password input
 //* input for passwords */
 function writePassword() {

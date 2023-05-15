@@ -24,7 +24,7 @@ function getRandomElementFromArray(collection) {
 
 // Write password to the #password input */
 
-/* if and else section , random var, user pw area*/
+/* if and else section, user password area*/
 function generatePassword() 
   var userNumCharacters = prompt(
     "How many characters would you like your password to be? Pick a number between 8-128."
@@ -44,7 +44,7 @@ function generatePassword()
       "This will include uppercase characters in your password?"
     );
   }
- //Sentence to check all */
+ //Sentence to check everything */
  if (
   [hasSpecialChar, hasNumbers, hasLowerCase, hasUpperCase].includes(
     true
@@ -103,17 +103,13 @@ while (guaranteedChar.length > 0) {
 }
 return randomChar.join("");
 
-// Write password to the #password input
-//* input for passwords */
+// //* input for passwords */
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
-
-
-// Add event listener to generate button
 // //  generate btn
 generateBtn.addEventListener("click", writePassword);
 

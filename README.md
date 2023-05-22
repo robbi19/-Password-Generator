@@ -1,4 +1,4 @@
-# Password Generator Starter Code
+
 # -Password-Generator
 
  Generate a random password based on certain criteria. This app will run in the browser with  HTML and CSS powered by your JavaScript code.

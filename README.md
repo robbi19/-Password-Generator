@@ -33,7 +33,6 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 
-
 Repo-https://github.com/robbi19/-Password-Generator
 
 Deploy-https://robbi19.github.io/-Password-Generator/

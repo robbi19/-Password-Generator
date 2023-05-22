@@ -38,6 +38,8 @@ Repo-https://github.com/robbi19/-Password-Generator
 
 Deploy-https://robbi19.github.io/-Password-Generator/
 
-Webpage screenshot-
+Webpage screenshot-<img width="347" alt="Screenshot 2023-05-21 221459" src="https://github.com/robbi19/-Password-Generator/assets/128949831/7b456b29-c449-413e-ac7b-b32302a9a9a6">
 
 Sources include stack overflow for github help, Youtube for learning array and alot of google for git commands.
+
+
